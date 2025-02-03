@@ -1,4 +1,9 @@
 create or replace package body pkg_pix as
+  /*
+    Created by Vinicius Damarques
+    https://github.com/vihdamarques/plsql-pix/
+  */
+
   type t_nested_tlv is table of varchar2(32767) index by varchar2(2);
   --
   C_ID_PAYLOAD_FORMAT_INDICATOR                 constant varchar2(2)  := '00';
