@@ -1,20 +1,20 @@
 create or replace package body pkg_pix as
   type t_nested_tlv is table of varchar2(32767) index by varchar2(2);
   --
-  C_ID_PAYLOAD_FORMAT_INDICATOR                 constant varchar2(2) := '00';
-  C_ID_MERCHANT_ACCOUNT_INFORMATION             constant varchar2(2) := '26';
-  C_ID_MERCHANT_ACCOUNT_INFORMATION_GUI         constant varchar2(2) := '00';
-  C_ID_MERCHANT_ACCOUNT_INFORMATION_KEY         constant varchar2(2) := '01';
-  C_ID_MERCHANT_ACCOUNT_INFORMATION_DESCRIPTION constant varchar2(2) := '02';
-  C_ID_MERCHANT_CATEGORY_CODE                   constant varchar2(2) := '52';
-  C_ID_TRANSACTION_CURRENCY                     constant varchar2(2) := '53';
-  C_ID_TRANSACTION_AMOUNT                       constant varchar2(2) := '54';
-  C_ID_COUNTRY_CODE                             constant varchar2(2) := '58';
-  C_ID_MERCHANT_NAME                            constant varchar2(2) := '59';
-  C_ID_MERCHANT_CITY                            constant varchar2(2) := '60';
-  C_ID_ADDITIONAL_DATA_FIELD_TEMPLATE           constant varchar2(2) := '62';
-  C_ID_ADDITIONAL_DATA_FIELD_TEMPLATE_TXID      constant varchar2(2) := '05';
-  C_ID_CRC16                                    constant varchar2(2) := '63';
+  C_ID_PAYLOAD_FORMAT_INDICATOR                 constant varchar2(2)  := '00';
+  C_ID_MERCHANT_ACCOUNT_INFORMATION             constant varchar2(2)  := '26';
+  C_ID_MERCHANT_ACCOUNT_INFORMATION_GUI         constant varchar2(2)  := '00';
+  C_ID_MERCHANT_ACCOUNT_INFORMATION_KEY         constant varchar2(2)  := '01';
+  C_ID_MERCHANT_ACCOUNT_INFORMATION_DESCRIPTION constant varchar2(2)  := '02';
+  C_ID_MERCHANT_CATEGORY_CODE                   constant varchar2(2)  := '52';
+  C_ID_TRANSACTION_CURRENCY                     constant varchar2(2)  := '53';
+  C_ID_TRANSACTION_AMOUNT                       constant varchar2(2)  := '54';
+  C_ID_COUNTRY_CODE                             constant varchar2(2)  := '58';
+  C_ID_MERCHANT_NAME                            constant varchar2(2)  := '59';
+  C_ID_MERCHANT_CITY                            constant varchar2(2)  := '60';
+  C_ID_ADDITIONAL_DATA_FIELD_TEMPLATE           constant varchar2(2)  := '62';
+  C_ID_ADDITIONAL_DATA_FIELD_TEMPLATE_TXID      constant varchar2(2)  := '05';
+  C_ID_CRC16                                    constant varchar2(2)  := '63';
   C_PAYLOAD_FORMAT_INDICATOR                    constant varchar2(2)  := '01';
   C_GUI                                         constant varchar2(14) := 'BR.GOV.BCB.PIX';
   C_MERCHANT_CATEGORY_CODE                      constant varchar2(4)  := '0000'; -- Not informed or MCC ISO18245
